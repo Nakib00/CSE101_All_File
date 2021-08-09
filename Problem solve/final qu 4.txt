@@ -1,0 +1,111 @@
+#include <iostream>
+using namespace std;
+
+void array_2d_input(int [20][20], int, int);
+void print2D(int [20][20], int, int);
+void bubble_sort(int[], int);
+int diagonal_values_2d(int [20][20], int, int, int[]);
+void array_reverse(int[], int [], int);
+void array_print(int[], int);
+
+int main()
+{
+    int array_2d[20][20], r,c, dg_array_1D[10], dg_array_1D_sorted[10], dg;
+
+    cout << "Enter number of rows (<=20): ";
+    cin >> r;
+    cout << "Enter number of column (<=20): ";
+    cin >> c;
+
+    array_2d_input(array_2d, r,c);
+
+    cout << "The matrix" << endl;
+    print2D(array_2d, r,c);
+
+    dg = diagonal_values_2d(array_2d,r,c,dg_array_1D);
+
+    bubble_sort(dg_array_1D, dg);
+
+    array_reverse(dg_array_1D, dg_array_1D_sorted, dg);
+
+    cout << "Sorted diagonal entries are: " << endl;
+    array_print(dg_array_1D_sorted, dg);
+
+    return 0;
+}
+
+void array_2d_input(int a[20][20], int r, int c)
+{
+  int i, j;
+
+  for(i = 0; i < r; i++){
+    for(j = 0; j < c; j++){
+      cout << "[" << i << "]" << "[" << j << "] = ";
+      cin >> a[i][j];
+    }
+  }
+}
+
+//printing a 2d array
+void print2D(int a[20][20], int r, int c){
+    int i, j;
+
+    for(i = 0; i < r; i = i + 1){     //row
+        for(j = 0; j < c ; j = j +1){        //column
+            cout << a[i][j] << " " ;
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+//saves the diagonal values in a one dimensional array returns number of elements
+int diagonal_values_2d(int two_D[20][20], int r, int c, int diagonal_values[])
+{
+    int i,j;
+
+    for(i = 0; i < r; i ++){
+        diagonal_values[i] = two_D[i][i];
+    }
+    return i;
+}
+
+//bubble sort function
+void bubble_sort(int a[], int array_size)
+{
+    int i, j,temp;
+    //loop to sort every number
+    for(j = 0; j < array_size - 1; j = j +1){
+        //this loop pushes the largest bubble at the end
+        for(i = 0; i < array_size -1 ;i = i +1){
+            
+            if (a[i] > a[i + 1]){
+                
+                temp = a[i];
+                a[i] = a [i + 1];
+                a[i + 1] = temp;
+            }
+        }
+    }
+}
+//function for reversing an array
+void array_reverse(int a[], int rev[], int array_size)
+{
+    int i, r;
+
+    r = array_size - 1;
+    for(i = 0; i < array_size; i = i + 1){
+        
+        rev[i] = a[r] ;
+        r = r - 1;
+    }
+}
+
+// print array forward
+void array_print(int x[], int n){
+    int i;
+    for(i=0; i<n; i++){
+
+        cout<<x[i]<<" ";
+    }
+    cout <<endl;
+}

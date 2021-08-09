@@ -1,0 +1,37 @@
+/* find all prime number in the array */
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int n, i, j, isprime, a[10];
+
+    cout<<"How many elements you want :";
+    cin>>n;
+
+// enter number in the array
+    for(i=0; i<n; i++){
+
+        cout<<"["<<i<<"] =";
+        cin>>a[i];
+    }
+    cout<<"Prime numbers are "<<endl;
+
+// prime number check
+    for(i=0; i<n; i++){
+         isprime = 1;
+        for(j=2; j < a[i]; j++){
+
+            if(a[i] % j ==0){
+                isprime = 0;
+                break;
+            }
+        }
+        if(isprime = 1){
+            cout<< a[i] <<" ";
+        }
+    }
+
+    return 0;
+}

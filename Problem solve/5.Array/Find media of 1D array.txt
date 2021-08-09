@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+int  array_input(int[] ); 
+
+void array_print(int[] , int);
+
+float Find_median(int [] , int );
+
+ int main(){
+    
+    int x[10], n;
+    
+    float median;
+    
+    n = array_input(x );
+    
+    cout<<"Before array"<<endl;
+    
+    array_print (x , n);
+    
+    
+     median = Find_median(x , n);
+    
+    cout<<" median  : "<<median;
+    
+    return 0;
+}
+
+int  array_input(int x[]){
+    
+    int i, n;
+    cout<<"How many Element :";
+    cin>>n;
+    
+    for(i=0; i<n; i++){
+        
+        cout<<"[ "<<i<<" ] =";
+        cin>>x[i];
+    }
+    return n;
+}
+void array_print(int x[], int n){
+    
+    int i;
+    for(i=0; i<n; i++){
+        
+        cout<<x[i]<<" ";
+    }
+    cout<<endl;
+}
+
+float Find_median(int x[] , int n)
+{
+    float median=0;
+    
+    if(n%2 == 0){
+        median = (x[(n-1)/2] +x[n/2])/2.0;
+    }
+    else
+    {
+        median = x[n/2];
+    }
+    
+    return median;
+}

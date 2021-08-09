@@ -1,0 +1,235 @@
+All following examples gives different pattern printing
+
+
+Exm 1:
+#include <iostream>
+using namespace std;
+int main()
+{
+    int rows;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    for(int i = 1; i <= rows; ++i)
+    {
+        for(int j = 1; j <= i; ++j)
+        {
+            cout << "* ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+output: 
+*
+**
+***
+
+Exm 2:
+#include <iostream>
+using namespace std;
+int main()
+{
+    int rows;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    for(int i = 1; i <= rows; ++i)
+    {
+        for(int j = 1; j <= i; ++j)
+        {
+            cout << j << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+
+outpout:
+1
+12
+123
+1234
+
+
+
+Exm 3:
+#include <iostream>
+using namespace std;
+int main()
+{
+    char input, alphabet = 'A';
+    cout << "Enter the uppercase character you want to print in the last row: ";
+    cin >> input;
+    for(int i = 1; i <= (input-'A'+1); ++i)
+    {
+        for(int j = 1; j <= i; ++j)
+        {
+            cout << alphabet << " ";
+        }
+        ++alphabet;
+        cout << endl;
+    }
+    return 0;
+}
+
+Exm 4:
+#include <iostream>
+using namespace std;
+// Function to demonstrate printing pattern
+int main()
+{
+    int n=5;
+    // number of spaces
+    int k = n;
+    // outer loop to handle number of rows
+    //  n in this case
+    for (int i=0; i<n; i++)
+    {
+        for (int j=0; j<k; j++)
+            cout <<" ";
+        k = k - 1;
+        for (int j=0; j<=i; j++ )
+        {            
+            cout << "* ";
+        }
+        cout << endl;
+    }
+return 0;
+}
+
+Output: 
+
+   *
+  **
+  ***
+
+Exm 7:
+#include <iostream>
+using namespace std;
+// Function to demonstrate printing pattern
+int main()
+{
+    int n=6;
+    // number of spaces
+    int k = 0;
+    // outer loop to handle number of rows
+    //  n in this case
+    for (int i=5; i>0; i--)
+    {
+        for (int j=0; j<k; j++)
+            cout <<" ";
+        k = k + 1;
+        for (int j=0; j<i; j++ )
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+return 0;
+}
+
+****
+ ***
+ **
+ *
+
+Exm 5:
+
+
+#include <iostream>
+using namespace std;
+// Function to demonstrate printing pattern
+int main()
+{
+    int n=5;
+    // number of spaces
+    int k = n;
+    // outer loop to handle number of rows
+    //  n in this case
+    for (int i=0; i<n; i=i+2)
+    {
+        for (int j=0; j<k; j++)
+            cout <<"  ";
+        k = k - 1;
+        for (int j=0; j<=i; j++ )
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+return 0;
+}
+
+output: 
+  *
+ ***
+*****
+
+
+
+Exm 6: 
+
+#include <iostream>
+using namespace std;
+// Function to demonstrate printing pattern
+int main()
+{
+    // number of spaces
+    int k = 5;
+    // outer loop to handle number of rows
+    //  n in this case
+    for (int i=5; i>0; i=i-2)
+    {
+        for (int j=0; j<k; j++)
+            cout <<"  ";
+        k = k + 1;
+        for (int j=0; j<i; j++ )
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+return 0;
+}
+
+
+Output: 
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+
+
+
+exm 7: 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int i, j;
+
+   for(i = 5; i > 0; i--)
+   {
+      //print * equal to row number
+      for(j = 0; j < i; j++)
+      {
+         cout << "* ";
+      }
+      cout << "\n";
+   }
+
+   return 0;
+}
+
+
+
+Output:
+
+****
+***
+**
+*
+
+

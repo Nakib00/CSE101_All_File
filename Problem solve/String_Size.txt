@@ -1,0 +1,29 @@
+Q1. This program will get the string size with str.length() function: 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string str = "C++ Programming";
+
+    // you can also use str.length()
+    cout << "String Length = " << str.size();
+
+    return 0;
+}
+
+Q2. This program will get the string size with strlen(str) function:
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    char str[] = "C++ Programming is awesome";
+
+    // you can also use strlen(str)
+    cout << "String Length = " << strlen(str);
+
+    return 0;
+}
