@@ -20,18 +20,18 @@ int main()
     
     cout<<"****y****"<<endl;
     arry_print(y, n_y);
-   
+
     arry_swap(x, y, n_x);
     
-     cout<<" After swap ";
+    cout<<" After swap ";
     
     cout<<"****x****"<<endl;
     arry_print(x, n_x);
     
     cout<<"****y****"<<endl;
     arry_print(y, n_y); 
- 
- return 0;
+
+return 0;
 }
 
 int  arry_input(int x[]){

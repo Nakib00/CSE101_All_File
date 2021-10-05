@@ -15,7 +15,7 @@ void array_print_1d(int[], int);   // print 1D array for sum r and sum c
 int max_2D_array (int [20][20] , int , int);       // Maximum 
 
 int min_2D_array (int [20][20] , int , int);       // Minimum
- 
+
 int frequency_2D (int [20] [20] , int , int );    // Frequency
 
 int sum_all_valu_2D (int [20][20], int , int);   // sum all valu
@@ -328,7 +328,7 @@ void search_by_index2D (int x[20][20], int r, int c, int index[]){
                 break;
             }
         }
-         if(b==x[i][j]){
+        if(b==x[i][j]){
         
                 break;
             }

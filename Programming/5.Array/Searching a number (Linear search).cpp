@@ -24,6 +24,6 @@ int main(){
         cout<<"scarch value was not found";
     }
     else 
-       cout<<"scarch value found in "<<pos<<" position";
+        cout<<"scarch value found in "<<pos<<" position";
     return 0;
 }

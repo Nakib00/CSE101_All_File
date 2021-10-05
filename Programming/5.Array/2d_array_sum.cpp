@@ -13,7 +13,7 @@ void array_sum_r(int[20][20], int[], int, int);
 
 
 int main(){
-    // Neawz.
+    
     int i, x[20][20], y[20], sum, sum_c, sum_r, n, n_c, n_r;
     n_c = 5;
     n_r = 5;

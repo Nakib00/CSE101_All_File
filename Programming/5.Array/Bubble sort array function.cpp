@@ -11,7 +11,7 @@ int main(){
     int x[10], n;
     
     n = arry_input(x);
- 
+
     cout<<" Befor arry "<<endl;
     
     arry_print (x , n);         // call function arry_print
@@ -19,10 +19,10 @@ int main(){
     cout<<" After Bubble sort "<<endl;
     
     bubble_sort (x , n);     // call bubble sort
-  
+
     arry_print (x , n);
     
- return 0;
+return 0;
 }
 
 // Input arry 

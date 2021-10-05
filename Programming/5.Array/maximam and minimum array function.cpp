@@ -12,7 +12,7 @@ int main()
     int x[10], n;
     
     n = arry_input(x);
- 
+
     cout<<" Befor arry "<<endl;
     
     arry_print (x , n);         // call function arry_print
@@ -34,7 +34,7 @@ int main()
     arry_print (x , n);
 
 
- return 0;
+return 0;
 }
 
 // Input arry 

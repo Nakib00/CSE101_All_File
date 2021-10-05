@@ -13,13 +13,13 @@ int main(){
     int x[10], n;
     
     n = arrt_random_input(x);
- 
+
     cout<<" Befor arry "<<endl;
     
     arry_print (x , n);         // call function arry_print
-  
+
     
- return 0;
+return 0;
 }
 
 // Input arry 
